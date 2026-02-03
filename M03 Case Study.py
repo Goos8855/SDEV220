@@ -1,3 +1,7 @@
+#M03 Case Study.py
+# This case study is meant to demonstrate the usage of classes, and how we can utilize them to store lots of data under one name
+# We utilized a super class and a class to let us store vehicle data under "car", then declared a function within that class to print all the data that is collected
+
 class Vehicle:
     def __init__(car, vehicle_type):
             car.vehicle_type = vehicle_type
@@ -14,7 +18,7 @@ class Automobile(Vehicle):
     def printInfo(car):
           clearTerminal()
           print("----- " + car.vehicle_type +" Information -----")
-          print(car.year + " " + car.make + " " + car.model)
+          print("This vehicle is a " + car.year + " " + car.make + " " + car.model)
           print("Number of doors:" + car.doors)
           print("Roof type: " + car.roof)
 def clearTerminal():
@@ -35,5 +39,6 @@ def main():
 
       car = Automobile(type,year,make,model,doors,roof)
       car.printInfo()
+
 
 main()
